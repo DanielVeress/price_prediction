@@ -2,6 +2,7 @@
 .ipynb_checkpoints/
 
 processed_data/*
+datasets/*
 
 *.ods
 *.zip
