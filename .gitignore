@@ -4,5 +4,7 @@
 processed_data/*
 datasets/*
 
+*/__pycache__/*
+
 *.ods
 *.zip
