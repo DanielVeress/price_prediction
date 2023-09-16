@@ -1,9 +1,10 @@
 .idea/
 .ipynb_checkpoints/
 
-processed_data/*
 datasets/*
+trading/plots/*
 
+__pycache__/*
 */__pycache__/*
 
 *.ods
