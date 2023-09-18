@@ -15,3 +15,32 @@ def format_num(num, infix="'", postfix='$'):
             formatted_num = letter + formatted_num
     
     return formatted_num + postfix
+
+
+def format_backtest_output(output):
+    dict_output = dict(output)
+
+    key_to_remove = '_'
+    symbols_to_replace = {
+        '[%]': 'PREC',
+        '[$]': 'USD',
+        '&': 'and',
+        '#': 'Num of',
+        '(Ann.)': '/Annual/'
+    }
+
+    filtered_output = {}
+    for key, value in dict_output.items():
+        
+        # only save  parameters, that doesn't start with the given perfix ('_')
+        if not key.startswith(key_to_remove):
+            
+            # replace not allowed symbols
+            new_key = key
+            for symbol, replacement in symbols_to_replace.items():
+                if symbol in new_key:
+                    new_key = new_key.replace(symbol, replacement)
+            
+            filtered_output[new_key] = value
+    
+    return filtered_output

@@ -3,6 +3,8 @@
 
 datasets/*
 trading/plots/*
+plots/*
+mlruns/*
 
 __pycache__/*
 */__pycache__/*

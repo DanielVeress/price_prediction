@@ -70,6 +70,7 @@ def plot_true_vs_predicted(X_plot, y_true, y_pred):
     )
 
     fig.show()
+    return fig
 
 
 def plot_difference(X_plot, y_true, y_pred):
@@ -99,6 +100,7 @@ def plot_difference(X_plot, y_true, y_pred):
     )
 
     fig.show()
+    return fig
 
 
 def plot_prices(X_plot, y_true, y_pred):
@@ -141,3 +143,4 @@ def plot_prices(X_plot, y_true, y_pred):
     )
 
     fig.show() 
+    return fig
