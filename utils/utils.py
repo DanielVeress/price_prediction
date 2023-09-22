@@ -17,10 +17,9 @@ def format_num(num, infix="'", postfix='$'):
     return formatted_num + postfix
 
 
-def format_backtest_output(output):
+def format_backtest_output(output, wanted_metrics):
     dict_output = dict(output)
 
-    key_to_remove = '_'
     symbols_to_replace = {
         '[%]': 'PREC',
         '[$]': 'USD',
@@ -32,8 +31,8 @@ def format_backtest_output(output):
     filtered_output = {}
     for key, value in dict_output.items():
         
-        # only save  parameters, that doesn't start with the given perfix ('_')
-        if not key.startswith(key_to_remove):
+        # only save  parameters, that are wanted
+        if key in wanted_metrics:
             
             # replace not allowed symbols
             new_key = key

@@ -1,10 +1,9 @@
-.idea/
 .ipynb_checkpoints/
 
 datasets/*
-trading/plots/*
 plots/*
 mlruns/*
+models/*
 
 __pycache__/*
 */__pycache__/*
